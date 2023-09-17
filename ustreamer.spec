@@ -1,11 +1,11 @@
 Summary:	Lightweight and fast MJPEG-HTTP streamer
 Name:		ustreamer
-Version:	5.31
+Version:	5.42
 Release:	1
 License:	GPL v3
 Group:		Applications/Multimedia
 Source0:	https://github.com/pikvm/ustreamer/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	ef8230570a937c1d3a69431461f0faa4
+# Source0-md5:	e08a6e4a5300faa72ecd8890abc60a7b
 URL:		https://github.com/pikvm/ustreamer
 BuildRequires:	libbsd-devel
 BuildRequires:	libevent-devel
@@ -43,7 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md docs/*.md
-%lang(ru) %doc README.ru.md
 %attr(755,root,root) %{_bindir}/ustreamer
 %attr(755,root,root) %{_bindir}/ustreamer-dump
 %{_mandir}/man1/ustreamer.1*
