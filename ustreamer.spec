@@ -20,11 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 uStreamer is a lightweight and very quick server to stream MJPEG video
 from any V4L2 device to the net.
 
-%description -n en.UTF-8
+%description -l en.UTF-8
 µStreamer is a lightweight and very quick server to stream MJPEG video
 from any V4L2 device to the net.
 
-%description -n pl.UTF-8
+%description -l pl.UTF-8
 µStreamer to lekki i bardzo szybki serwer strumieni obrazu MJPEG z
 dowolnego urządzenia V4L2 do sieci.
 
