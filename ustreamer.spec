@@ -1,9 +1,11 @@
 Summary:	Lightweight and fast MJPEG-HTTP streamer
+Summary(pl.UTF-8):	Lekki i szybki program do emisji strumieni MJPEG-HTTP
 Name:		ustreamer
 Version:	5.42
 Release:	1
 License:	GPL v3
 Group:		Applications/Multimedia
+#Source0Download: https://github.com/pikvm/ustreamer/tags
 Source0:	https://github.com/pikvm/ustreamer/archive/v%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	e08a6e4a5300faa72ecd8890abc60a7b
 URL:		https://github.com/pikvm/ustreamer
@@ -15,8 +17,16 @@ BuildRequires:	systemd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+uStreamer is a lightweight and very quick server to stream MJPEG video
+from any V4L2 device to the net.
+
+%description -n en.UTF-8
 µStreamer is a lightweight and very quick server to stream MJPEG video
 from any V4L2 device to the net.
+
+%description -n pl.UTF-8
+µStreamer to lekki i bardzo szybki serwer strumieni obrazu MJPEG z
+dowolnego urządzenia V4L2 do sieci.
 
 %prep
 %setup -q
