@@ -1,17 +1,21 @@
+#
+# Conditional build:
+%bcond_without	libgpiod	# GPIO support
+
 Summary:	Lightweight and fast MJPEG-HTTP streamer
 Summary(pl.UTF-8):	Lekki i szybki program do emisji strumieni MJPEG-HTTP
 Name:		ustreamer
-Version:	5.42
+Version:	5.45
 Release:	1
 License:	GPL v3
 Group:		Applications/Multimedia
 #Source0Download: https://github.com/pikvm/ustreamer/tags
 Source0:	https://github.com/pikvm/ustreamer/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	e08a6e4a5300faa72ecd8890abc60a7b
+# Source0-md5:	6709d4eef26ec6e0c8831f877152373e
 URL:		https://github.com/pikvm/ustreamer
 BuildRequires:	libbsd-devel
 BuildRequires:	libevent-devel
-BuildRequires:	libgpiod-devel
+%{?with_libgpiod:BuildRequires:	libgpiod-devel < 2}
 BuildRequires:	libjpeg-devel
 BuildRequires:	systemd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,7 +40,7 @@ dowolnego urządzenia V4L2 do sieci.
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcppflags} %{rpmcflags}" \
 	LDFLAGS="%{rpmldflags}" \
-	WITH_GPIO=1 \
+	%{?with_libgpiod:WITH_GPIO=1} \
 	WITH_SYSTEMD=1
 
 %install
