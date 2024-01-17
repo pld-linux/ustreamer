@@ -5,15 +5,13 @@
 Summary:	Lightweight and fast MJPEG-HTTP streamer
 Summary(pl.UTF-8):	Lekki i szybki program do emisji strumieni MJPEG-HTTP
 Name:		ustreamer
-Version:	5.46
-Release:	2
+Version:	5.48
+Release:	1
 License:	GPL v3
 Group:		Applications/Multimedia
 #Source0Download: https://github.com/pikvm/ustreamer/tags
 Source0:	https://github.com/pikvm/ustreamer/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	069c99f597d1b0dc72740b668baaaff6
-Patch0:		verbose_build.patch
-Patch1:		libgpiod2.patch
+# Source0-md5:	417816c8e6142c7860a2feccc50126e6
 URL:		https://github.com/pikvm/ustreamer
 BuildRequires:	libbsd-devel
 BuildRequires:	libevent-devel
@@ -36,8 +34,6 @@ dowolnego urządzenia V4L2 do sieci.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__make} \
